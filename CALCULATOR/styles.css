@@ -1,0 +1,138 @@
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+a,
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
+
+.calculator {
+  background: #2c3e50;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  width: 320px;
+}
+
+.calculator-screen {
+  background: #34495e;
+  color: #ecf0f1;
+  font-size: 32px;
+  text-align: right;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  min-height: 50px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  background: #ecf0f1;
+  color: #2c3e50;
+  padding: 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:hover {
+  background: #bdc3c7;
+}
+
+.operator {
+  background: #e74c3c;
+  color: #ffffff;
+}
+
+.operator:hover {
+  background: #c0392b;
+}
+
+.operator:active {
+  background: #a93226;
+}
+
+#equals {
+  background: #27ae60;
+  color: #ffffff;
+  grid-column: span 4;
+}
+
+#equals:hover {
+  background: #229954;
+}
+
+#equals:active {
+  background: #1e8449;
+}
+
+.btn[data-action="clear"],
+.btn[data-action="backspace"] {
+  background: #e74c3c;
+  color: #ffffff;
+}
+
+.btn[data-action="clear"]:hover,
+.btn[data-action="backspace"]:hover {
+  background: #c0392b;
+}
+
+.btn[data-action="clear"]:active,
+.btn[data-action="backspace"]:active {
+  background: #a93226;
+}
+
+.btn[data-action="percent"] {
+  background: #f39c12;
+  color: #ffffff;
+}
+
+.btn[data-action="percent"]:hover {
+  background: #e67e22;
+}
+
+.btn[data-action="percent"]:active {
+  background: #d35400;
+}
+
+.calculator-buttons button[data-action="number"] {
+  background: #ecf0f1;
+}
+
+.calculator-buttons button[data-action="number"]:hover {
+  background: #bdc3c7;
+}
+
+.calculator-buttons button[data-action="number"]:active {
+  background: #95a5a6;
+}
